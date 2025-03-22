@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  background-color: white;
+  padding: 0;
+  border-radius: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 900px;
+  height: 450px;
+  display: flex;
+  overflow: hidden;
+}
+
+.parte-verde {
+  position: relative;
+  background-color: #476F40;
+  width: 25%;
+  padding: 20px;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column; /* Organiza os elementos na vertical */
+  align-items: center; /* Centraliza horizontalmente */
+  height: 100%; /* Garante que ocupe toda a altura do container */
+  font-family: 'Phetsarath', sans-serif;
+
+}
+
+.conteudo-branco {
+  background-color: white;
+  width: 65%; /* Proporção da parte branca */
+  padding: 20px;
+}
+
+.primeiro-titulo{
+  position: relative;
+  color: white;
+  font-size: 30px;
+  font-family: 'Phetsarath', sans-serif;
+  align-items: baseline;
+  margin-left: 35px;
+  margin-top: 75px;
+}
+
+.primeio-texto{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.botão-cadastrar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  border: 1px solid white; /* Borda branca */
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+
+/* Efeito ao passar o mouse */
+.botão-cadastrar:hover {
+  background-color: white;
+  color: #476F40;
+}
+
+/* Efeito ao clicar */
+.botão-cadastrar:active {
+  transform: scale(0.95);
+}
+
+.conteudo-branco {
+  display: flex;
+  flex-direction: column; /* Organiza os inputs e o botão na vertical */
+  align-items: center; /* Centraliza os inputs horizontalmente */
+  padding: 20px;
+  width: 300px; /* Ajuste a largura conforme necessário */
+  margin: 0 auto; /* Centraliza a caixa de conteúdo */
+  gap: 10px; /* Espaço entre os inputs e o botão */
+  font-family: 'Phetsarath', sans-serif;
+
+}
+
+.segundo-titulo {
+  font-family: 'Phetsarath', sans-serif;
+  color: #476F40;
+  text-align: center;
+  font-size: 27px;
+  margin-top: 80px; /* Remover a margem superior */
+}
+
+/* Estilo dos inputs */
+.input-container, .input-container2 {
+  position: relative;
+  width: 100%;
+}
+
+/* Ícone dentro do input */
+.input-container img.input-icon, .input-container2 img.lock-icon {
+  position: absolute;
+  left: 10px; /* Posiciona o ícone à esquerda */
+  top: 50%; /* Centraliza o ícone verticalmente */
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilo dos inputs */
+input {
+  width: 100%;
+  padding: 15px 15px 15px 35px; /* Ajusta o padding-left para dar espaço ao ícone */
+  margin: 5px 0;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  background-color: #D9D9D9;
+  box-sizing: border-box; /* Garantir que o padding não afete o tamanho total do input */
+}
+
+/* Foco no input */
+input:focus {
+  outline: none;
+  border: 2px solid #476f4061;
+  /* Não adicione text-indent aqui, para manter o texto na posição */
+}
+
+/* Placeholder */
+::placeholder {
+  color: #98A196;
+  font-size: 15px;
+  padding-left: 10px; /* Deixa o placeholder com o mesmo espaço do ícone */
+}
+
+
+.botão-login {
+  width: 70%;
+  padding: 15px;
+  margin-top: 15px;
+  background-color: #476F40; /* Cor do botão */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  transition: all 0.3s;
+
+}
+
+.botão-login:hover {
+  background-color: rgb(72, 102, 68);
+}
+
+.botão-login:active{
+  transform: scale(0.95);
+}
+

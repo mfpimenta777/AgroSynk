@@ -1,0 +1,1127 @@
+/* CSS */
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+.marcellus-sc-regular {
+  font-family: "Marcellus SC", serif; /* Aplica a fonte corretamente */
+  font-weight: 400; /* Define o peso normal */
+  font-style: normal; /* Define o estilo normal */
+}
+
+
+body {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  height: 90vh; /* Diminui o tamanho visível da página */
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+
+.Banner {
+  display: block;
+  width: 100%;
+  height: 110vh; /* Ajusta para ocupar toda a altura da tela */
+  object-fit: cover;
+  object-position: center center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .Texto-principal {
+    font-size: 40px !important; /* Aumenta ou ajusta o tamanho da fonte conforme necessário */
+    white-space: normal; /* Permite quebra de linha automática */
+    word-wrap: break-word; /* Quebra palavras muito longas */
+    word-break: break-word; /* Adiciona suporte extra para quebra */
+    margin: 0 auto; /* Centraliza o texto horizontalmente */
+    text-align: center; /* Garante o alinhamento ao centro */
+    max-width: 100%; /* Impede que o texto ultrapasse a largura da tela */
+    box-sizing: border-box; /* Garante que a largura máxima considere o padding e as bordas */
+    margin-top: -30px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .Paragrafo-principal {
+    font-size: 22px !important; /* Aumente ou ajuste o tamanho da fonte conforme necessário */
+    margin-top: 35px;
+
+  }
+}
+
+
+
+.Logo {
+  display: flex;
+  width: 150px; /* Define o tamanho do logo */
+  position: absolute; /* Permite posicionamento preciso */
+  top: 50px; /* Alinha ao topo */
+  left: 250px; /* Ajusta a distância do lado esquerdo */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+/* Efeito de hover para a logo */
+.Logo:hover {
+  transform: scale(1.1); /* Aumenta o tamanho em 10% */
+}
+
+@media screen and (max-width: 768px) {
+  .Logo {
+    width: 140px;
+    top: 40px;
+    left: 20px; /* Ajuste conforme necessário */
+  }
+}
+
+
+.HOME {
+  color: rgb(255, 255, 255);
+  position: absolute; /* Permite posicionamento preciso */
+  top: 60px; /* Alinha ao topo */
+  left: 760px; /* Ajusta a distância do lado esquerdo */
+  font-size: 16px ;
+  font-weight: 500; /* Peso leve para a fonte */
+  transition: color 0.3s ease-in-out;
+
+}
+.HOME:hover {
+  color: #7c8875; /* Cor de fundo escura e sofisticada */
+}
+
+
+.QUEM {
+  color: rgb(255, 255, 255);
+  position: absolute; /* Permite posicionamento preciso */
+  top: 60px; /* Alinha ao topo */
+  left: 855px; /* Ajusta a distância do lado esquerdo */
+  font-size: 16px ;
+  font-weight: 500; /* Peso leve para a fonte */
+  transition: color 0.3s ease-in-out;
+}
+
+.QUEM:hover {
+  color: #c5b8b5;
+}
+
+.SERVIÇOS {
+  color: rgb(255, 255, 255);
+  position: absolute; /* Permite posicionamento preciso */
+  top: 60px; /* Alinha ao topo */
+  left: 1020px; /* Ajusta a distância do lado esquerdo */
+  font-size: 16px ;
+  font-weight: 500; /* Peso leve para a fonte */
+  transition: color 0.3s ease-in-out;
+
+}
+
+.SERVIÇOS:hover {
+  color: #c5b8b5;
+}
+
+
+.AVALIAÇÕES {
+  color: rgb(255, 255, 255);
+  position: absolute; /* Permite posicionamento preciso */
+  top: 60px; /* Alinha ao topo */
+  left: 1150px; /* Ajusta a distância do lado esquerdo */
+  font-size: 16px ;
+  font-weight: 500; /* Peso leve para a fonte */
+  transform: translateX(0%); /* Ajusta a posição para ficar perfeitamente centralizado */
+  transition: color 0.3s ease-in-out;
+}
+
+.AVALIAÇÕES:hover {
+  color: #c5b8b5;
+}
+
+
+.RETANGULO {
+  color: aliceblue;
+  background-color: #39502d; /* Cor de fundo escura e sofisticada */
+  position: absolute; /* Mantém o posicionamento original */
+  top: 60px; /* Mantém a posição vertical */
+  left: 50%; /* Mantém a posição horizontal */
+  transform: translateX(310%); /* Mantém o ajuste de posição */
+  font-size: 16px;
+  font-weight: 500; /* Define peso da fonte */
+  height: 50px;
+  width: 150px;
+  text-align: center; /* Centraliza o texto horizontalmente */
+  line-height: 50px; /* Centraliza o texto verticalmente */
+  cursor: pointer; /* Mostra o cursor de clique */
+  border: 2px solid transparent; /* Borda transparente para efeito de hover */
+  transition: all 0.3s ease; /* Transição suave para todos os efeitos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+  border-radius: 10px;
+}
+
+/* Efeito de hover */
+.RETANGULO:hover {
+  background-color: #78895e; /* Cor de fundo mais clara ao passar o mouse */
+  border-color: aliceblue; /* Borda branca ao passar o mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+  transform: translateX(310%) scale(1.05); /* Aumenta levemente o tamanho do botão */
+}
+
+/* Efeito de clique (ativo) */
+.RETANGULO:active {
+  background-color: #1E1A17; /* Cor de fundo mais escura ao clicar */
+  transform: translateX(310%) scale(0.95); /* Reduz levemente o tamanho do botão */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra mais suave ao clicar */
+}
+
+
+
+
+
+
+
+.menu-icon {
+  display: none;
+}
+
+  @media (max-width: 768px) {
+    .HOME, .QUEM, .SERVIÇOS, .AVALIAÇÕES, .RETANGULO {
+      display: none;
+    }
+
+    /* Exibe o ícone de menu */
+    .menu-icon {
+      display: block;
+      position: absolute; /* Alterado para absolute */
+      top: 60px; /* Posiciona no topo */
+      right: 40px; /* Posiciona à direita */
+      cursor: pointer;
+      transition: transform 0.3s ease; /* Transição suave apenas no movimento */
+  }
+
+    .menu-icon:hover {
+      transform: scale(1.1); /* Aumenta levemente o tamanho no hover */
+      /* Retirei a sombra para eliminar o quadrado transparente */
+    }
+
+    .menu-icon img {
+      width: 30px; /* Tamanho do ícone de menu */
+      height: auto;
+      transition: transform 0.3s ease; /* Transição suave para a animação de clique */
+    }
+
+    /* Animação de clique no ícone (transforma o ícone em uma "X" ou outro efeito desejado) */
+    .menu-icon.open img {
+      transform: rotate(45deg); /* Exemplo de animação, pode ser substituída por outra */
+    }
+  }
+
+
+
+
+/* Estilos do modal */
+
+.modal-overlay {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Garante que o modal fique acima de tudo */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease; /* Animação de entrada */
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+.modal-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-menu li {
+  margin: 15px 0;
+}
+
+.modal-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.modal-menu li a:hover {
+  color: #000;
+}
+
+/* Animação de entrada do modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Fim Estilos do modal */
+
+
+
+
+
+
+.Texto-principal {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 24px; /* Ajuste de tamanho de texto */
+  position: absolute;
+  top: 45%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Move o elemento para o centro exato */
+  font-family: "Marcellus SC", serif;
+  font-weight: 50; /* Peso leve para a fonte */
+  font-size: 65px;
+  white-space: nowrap; /* Impede a quebra de linha */
+}
+.Paragrafo-principal{
+  color: white;
+  text-align: center;
+  font-size: 24px; /* Ajuste de tamanho de texto */
+  position: absolute;
+  top: 63%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Move o elemento para o centro exato */
+  font-weight: 200; /* Peso leve para a fonte */
+  font-size: 22px;
+}
+
+/* Estilos para telas maiores (PC) */
+.BOTAO-WHATSAPP {
+  margin-top: 5vh;
+  margin-left: 10%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  background-color: #39502d; /* Cor de fundo escura e sofisticada */
+  top: 70%;
+  left: 15%;
+  font-size: 16px;
+  font-weight: 500;
+  height: 50px;
+  width: 400px;
+  cursor: pointer;
+  border: 2px solid transparent; /* Borda transparente para efeito de hover */
+  transition: all 0.3s ease; /* Transição suave para todos os efeitos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+  border-radius: 10px;
+}
+
+
+/* Efeito de hover para o botão do WhatsApp */
+.BOTAO-WHATSAPP:hover {
+  background-color: #78895e; /* Cor de fundo mais clara ao passar o mouse */
+  color: aliceblue; /* Texto escuro ao passar o mouse */
+  border-color: #ffffff; /* Borda escura ao passar o mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+  
+}
+
+/* Efeito de clique (ativo) para o botão do WhatsApp */
+.BOTAO-WHATSAPP:active {
+  background-color: #f0f0f0; /* Cor de fundo mais clara ao clicar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra mais suave ao clicar */
+}
+
+
+
+/* Estilos base para o botão de localização */
+.BOTAO-LOCALIZACAO {
+  margin-top: 5vh;
+  margin-left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2B2621; /* Cor do texto escuro */
+  background-color: white; /* Fundo branco */
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  font-size: 16px;
+  font-weight: 500;
+  height: 50px;
+  width: 400px;
+  cursor: pointer;
+  border: 2px solid transparent; /* Borda transparente para efeito de hover */
+  transition: all 0.3s ease; /* Transição suave para todos os efeitos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+  border-radius: 10px;
+}
+
+/* Efeito de hover para o botão de localização */
+.BOTAO-LOCALIZACAO:hover {
+  background-color: #f0f0f0; /* Fundo cinza claro ao passar o mouse */
+  color: #2B2621; /* Mantém a cor do texto escura */
+  border-color: #ffffff; /* Borda escura ao passar o mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Efeito de clique (ativo) para o botão de localização */
+.BOTAO-LOCALIZACAO:active {
+  background-color: #dad7d5; /* Cor de fundo mais escura ao clicar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra mais suave ao clicar */
+}
+
+.ICON-WHATSAPP, .ICON-LOCALIZACAO {
+  margin-right: 20px;
+  width: 25px;
+  height: 25px;
+}
+
+.texto-whats, .texto-localizacao {
+  margin-right: 30px;
+  font-size: 17px;
+}
+
+/* Media Queries para telas menores (tablets e smartphones) */
+@media screen and (max-width: 768px) {
+  .BOTAO-WHATSAPP, .BOTAO-LOCALIZACAO {
+    touch-action: manipulation;
+
+    width: 80%; /* Largura ajustada para telas menores */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar corretamente */
+    font-size: 14px;
+    height: 45px;
+    margin-top: 2vh; /* Espaçamento vertical reduzido */
+    margin-left: 0; /* Remove a margem esquerda */
+  }
+
+  .BOTAO-WHATSAPP {
+    top: 80%; /* Posiciona o botão do WhatsApp */
+  }
+
+  .BOTAO-LOCALIZACAO {
+    top: 87%; /* Posiciona o botão de localização abaixo do WhatsApp */
+  }
+
+  .ICON-WHATSAPP, .ICON-LOCALIZACAO {
+    width: 20px;
+    height: 20px;
+  }
+
+  .texto-whats, .texto-localizacao {
+    font-size: 14px;
+    margin-right: 20px;
+  }
+}
+
+/* Media Queries para telas muito pequenas (smartphones) */
+@media screen and (max-width: 480px) {
+  .BOTAO-WHATSAPP, .BOTAO-LOCALIZACAO {
+    width: 90%; /* Largura maior para telas muito pequenas */
+    font-size: 12px;
+    height: 40px;
+    margin-top: 1.5vh; /* Espaçamento vertical reduzido */
+  }
+
+  .BOTAO-WHATSAPP {
+    top: 82%; /* Ajuste fino no posicionamento vertical */
+  }
+
+  .BOTAO-LOCALIZACAO {
+    top: 89%; /* Ajuste fino no posicionamento vertical */
+  }
+
+  .ICON-WHATSAPP, .ICON-LOCALIZACAO {
+    width: 18px;
+    height: 18px;
+  }
+
+  .texto-whats, .texto-localizacao {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+}
+
+
+/*TELA QUEM SOMOS*/
+  
+  .Quem-somos{
+    font: inter;
+    font-size: 3.7rem;
+    font-weight: 600; /* Peso leve para a fonte */
+    margin-left: 10%;
+    color: #2B2621;
+  }
+
+
+  .Paragrafo-quem-somos{
+    font-family: 'Kantumruy Pro', sans-serif; 
+    font-size: 1.4rem;
+    font-weight: 300; /* Peso leve para a fonte */
+    margin-left: 8%;
+    line-height: 1.6; /* Ajuste o valor para aumentar ou diminuir o espaçamento */
+    color: #2B2621;
+  }
+  .Paragrafo-quem-somos strong {
+    font-weight: 600; /* Ajusta o peso do negrito para algo mais leve */
+  }
+
+  .imagem-quemsomos{
+    margin-left: 50%;
+    width: 50%;
+  }
+
+  .letra-fina {
+    font-weight: 350; /* Deixa o "l" mais fino */
+  }
+
+  .quadrado {
+    position: absolute;
+    margin-top: -45%;
+    margin-left: 5%;
+    width: 700px;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0); /* Transparente */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Sombra simétrica */
+  }
+
+  /* Media Query para telas menores */
+@media (max-width: 768px) {
+  .imagem-quemsomos {
+    display: none; /* Esconde a imagem em telas pequenas */
+  }
+}
+
+@media (max-width: 768px) {
+  .Quem-somos {
+    font-size: 2rem;
+  }
+  .Paragrafo-quem-somos {
+    font-size: 1rem; /* Tamanho base */
+    text-align: justify; /* Justifica o texto */
+    text-align-last: left; /* Alinha a última linha à esquerda */
+    word-break: break-word; /* Permite quebra de palavras longas */
+    hyphens: auto; /* Quebra palavras automaticamente */
+    max-width: 80%; /* Controla a largura do parágrafo */
+  }
+  
+  .quadrado{
+    position: absolute;
+    margin-top: 10%;
+    align-items: center;
+    padding: 80px 0;
+    margin-left: 0;
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, 5%); /* Ajusta a posição para garantir a centralização */
+    width: 90%;
+    height: auto;
+
+}
+}
+
+
+
+
+/* FIM TELA QUEM SOMOS*/
+
+
+
+
+
+/* TELA DE SERVIÇOS */
+
+.texto-servicos {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 3.7rem;
+  font-weight: 600;
+  margin-top: 10%;
+  color: #2B2621;
+}
+
+@media (max-width: 768px) {
+  .texto-servicos {
+    font-size: 2rem;
+    margin-top: 210%;
+    margin-bottom: 10%;
+  } 
+}
+
+.slider-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  align-items: center;
+  flex-direction: row; /* Padrão: sliders lado a lado */
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    flex-direction: column; /* Em telas menores, sliders um abaixo do outro */
+    gap: 30px;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 19%; /* Largura para 3 sliders lado a lado */
+  height: auto;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    width: 80%; /* Aumenta a largura para ocupar mais espaço em telas menores */
+    height: auto;
+    border-radius: 20px;
+  }
+}
+
+.slides {
+  width: 400%;
+  height: 400px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+  transition: 2s;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manual-navigation {
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  z-index: 999;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.manual-btn:hover {
+  background-color: white;
+}
+
+#radio1:checked ~ .first,
+#radio5:checked ~ .second,
+#radio9:checked ~ .third {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first,
+#radio6:checked ~ .second,
+#radio10:checked ~ .third {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first,
+#radio7:checked ~ .second,
+#radio11:checked ~ .third {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first,
+#radio8:checked ~ .second,
+#radio12:checked ~ .third {
+  margin-left: -75%;
+}
+
+.slide-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.titulo-lavatorio {
+  font-size: 2.2rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .titulo-lavatorio {
+    font-size: 1.5rem;
+  }
+}
+
+.paragrafo-lavatorio {
+  font-weight: 350;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+
+.RETANGULO2 {
+  color: aliceblue;
+  background-color: #2B2621;
+  font-size: 20px;
+  font-weight: 500;
+  height: 60px;
+  width: 180px;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid transparent; /* Borda transparente para efeito de hover */
+  transition: all 0.3s ease; /* Transição suave para todos os efeitos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+}
+
+/* Efeito de hover */
+.RETANGULO2:hover {
+  background-color: #494039; /* Cor de fundo mais clara ao passar o mouse */
+  border-color: aliceblue; /* Borda branca ao passar o mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+  transform: scale(1.05); /* Au menta levemente o tamanho do botão */
+}
+
+/* Efeito de clique (ativo) */
+.RETANGULO2:active {
+  background-color: #1E1A17; /* Cor de fundo mais escura ao clicar */
+  transform: scale(0.95); /* Reduz levemente o tamanho do botão */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra mais suave ao clicar */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TELA DE AVALIAÇÃO */
+
+
+  .quadrado-avaliacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8% auto 0 auto;
+    width: 1500px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0); /* Transparente */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Sombra */
+    margin-top: 200px;
+  }
+
+  .Texto-principal-avaliacao {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 3.7rem;
+    font-weight: 600;
+    color: #2B2621;
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .Texto-principal-avaliacao {
+      font-size: 2rem !important; /* Use !important como último recurso */
+    }
+  }
+
+
+  .container-avaliacoes {
+    display: flex;
+    justify-content: space-between; /* Garante que as avaliações fiquem lado a lado */
+    gap: 5px; /* Diminui o espaço entre as avaliações */
+    width: 100%;
+    flex-wrap: nowrap; /* Evita que quebre para baixo */
+  }
+
+  .container-fotos-avaliacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32%; /* Permite que a imagem cresça sem ultrapassar os limites */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .imagem-avaliacao {
+    width: 35%; /* Aumenta a imagem sem desconfigurar o layout */
+    max-width: 150px; /* Define um limite para não exagerar */
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out; /* Adiciona transição suave */
+
+  }
+
+  .imagem-avaliacao:hover{
+    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+  }
+
+
+  /* Nome do usuário */
+  .titulo-avaliacao1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+
+  /* Texto da avaliação */
+  .paragrafo-avaliacao1 {
+    font-weight: 350;
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+
+  /* Estrelas */
+  .container-estrela {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .estrela {
+    width: 25px;
+  }
+
+  /* Responsividade para telas menores */
+  @media (max-width: 1200px) {
+    .quadrado-avaliacao {
+      width: 80%;
+      height: auto;
+      padding: 40px 0;
+      margin-top: 200px;
+    }
+
+    .container-avaliacoes {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container-fotos-avaliacao {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .Texto-principal-avaliacao {
+      font-size: 2.5rem;
+    }
+
+    .container-fotos-avaliacao {
+      width: 100%;
+    }
+
+    .imagem-avaliacao {
+      width: 80px;
+      height: 80px;
+    }
+
+    .estrela {
+      width: 20px;
+    }
+  }
+
+
+
+  /* ----------------------------TELA FINAL ------------------------------ */
+
+  .container-final{
+    margin-top: -350px;
+  }
+
+  .container-final{
+    position: relative;  /* Para que o posicionamento absoluto funcione em relação ao body */
+    min-height: 130vh;    /* Garante que o body tenha altura mínima de 100% da tela */
+
+  }
+  .imagem-final{
+    display: flex;
+    position: absolute;
+    bottom: 0;    /* Posiciona a imagem na parte inferior da página */
+    width: 100%;
+    height: 790px; /* Defina o valor desejado para a altura */
+    object-fit: cover; /* Opcional, para ajustar a imagem sem distorcer */
+  }
+
+  
+
+  @media (max-width: 768px) {
+    .imagem-final {
+      height: 150vh; /* Cobrir 120% da altura da tela */
+
+       }
+  }
+
+    .logo-final{
+      display: flex;
+      position: absolute;
+      top: 47%;   /* Ajuste a distância do topo conforme necessário */
+      left: 15%;
+      z-index: 10; /* Garante que a logo fique acima da imagem */
+      width: 11%;
+      transition: transform 0.3s ease; /* Adiciona uma transição suave */
+
+    }
+
+
+    @media (max-width: 768px) {
+      .logo-final {
+        display: flex;
+        position: static;
+        justify-content: center;
+        padding-top: 400px; /* Ajuste o valor conforme necessário */
+        width: 150px;
+        margin: 0 auto; /* Centraliza horizontalmente (backup) */
+        width: 150px; /* Ajuste o tamanho da logo para mobile */
+        transform: translateX(0%); /* Ajuste se necessário para centralização precisa */
+      }
+     
+    }
+
+    .navegação {
+      font-size: 17px;
+      position: absolute;
+      margin-top: 25%;
+      color: aliceblue;
+      font-weight: 800;
+      left: 45%; /* Posicionamento para telas maiores */
+    }
+    
+    @media (max-width: 768px) {
+      .navegação {
+        left: 50%; /* Move o elemento para o centro horizontal */
+        transform: translateX(-50%); /* Centraliza precisamente */
+        margin-top: 20px; /* Ajuste o valor conforme necessário */
+        text-align: center; /* Centraliza o texto */
+      }
+    }
+
+    .fonte {
+      display: flex;
+      position: relative;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 18px;
+      transition: color 0.3s ease-in-out;
+      color: rgb(255, 255, 255);
+      top: 650px;
+      z-index: 9999;
+      text-decoration: none; /* Remove a linha sob o texto */
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column; /* Empilha os links verticalmente */
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os links */
+}
+
+  
+  .navegacao2{
+    font-size: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    top: 650px; /* Ajuste o valor para deslocar para baixo conforme necessário */
+    margin-bottom: 50px;
+  }
+  html {
+    scroll-behavior: smooth;
+}
+
+
+
+  .navegação2{
+    margin-top: 30%;
+  }
+
+  
+
+
+  .navegação3{
+    margin-top: 15%;
+
+  }
+
+  /* Estilos para telas maiores (acima de 768px) */
+.titulo-final {
+  margin-left: 100%;
+  white-space: nowrap; /* Impede que o texto quebre */
+  position: absolute; /* Mantém o posicionamento absoluto */
+  left: 100%; /* Posiciona à direita */
+  margin-top: 300px;
+}
+
+.fonte2 {
+  margin-left: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  white-space: nowrap; /* Impede que o texto quebre */
+  position: absolute; /* Mantém o posicionamento absoluto */
+  left: 100%; /* Posiciona à direita */
+  margin-top: 400px;
+}
+
+/* Estilos para telas menores (até 768px) */
+@media (max-width: 768px) {
+  .titulo-final, .fonte2 {
+    left: 50%; /* Move o elemento para o centro horizontal */
+    transform: translateX(-50%); /* Centraliza precisamente */
+    margin-left: 0; /* Remove a margem esquerda */
+    text-align: center; /* Centraliza o texto */
+    white-space: normal; /* Permite que o texto quebre em telas menores */
+    
+  }
+}
+
+/* Ajustes adicionais para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+   .fonte2 {
+    font-size: 20px; /* Reduz o tamanho da fonte para smartphones */
+    margin-top: 450px;
+  }
+}
+
+.Favicon-fim {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  gap: 50px;
+  padding-top: 950px; /* Ajuste conforme necessário */
+  z-index: 999;
+  height: 45px;
+}
+
+.Favicon-fim img, 
+.Favicon-fim svg { /* Para imagens e ícones SVG */
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer; /* Indica que é clicável */
+}
+
+.Favicon-fim img:hover, 
+.Favicon-fim svg:hover {
+  transform: scale(1.2); /* Aumenta 20% ao passar o mouse */
+}
+
+/* Animação de "pulsação" ao clicar */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.Favicon-fim img:active, 
+.Favicon-fim svg:active {
+  animation: pulse 0.3s ease-in-out;
+}
+
+
+
+
+
+
+  @media (max-width: 768px) {
+    .Favicon-fim {
+        gap: 35px; /* Reduz o espaçamento entre os favicons */
+        transform: translateY(-100px); /* Move o elemento 100px para cima */
+        height: 40px; /* Ajusta a altura do container */
+    }
+  }
+
+
+  .copyright {
+    text-align: center; /* Centraliza o texto */
+    font-size: 17px; /* Tamanho da fonte */
+    color: #c9c7c7; /* Cor do texto */
+    margin-top: 100px; /* Espaçamento superior */
+    position: relative; /* ou absolute/fixed, dependendo do caso */
+    z-index: 1000; /* Valor maior que o z-index de outros elementos */
+    bottom: 30px; /* Afasta o copyright do fundo */
+  }
+
+  @media (max-width: 768px) {
+    .copyright {
+      bottom: 20px; /* Um pouco mais próximo do fundo em telas menores */
+      font-size: 14px;
+    }
+  }
+
+
+
+  .menu a {
+    text-decoration: none; /* Remove a linha embaixo do link */
+  }
+  
+ 
+  
