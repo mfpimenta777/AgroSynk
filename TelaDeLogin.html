@@ -6,8 +6,8 @@
     <title>Tela de Login</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Marcellus+SC&family=Phetsarath:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Marcellus+SC&family=Phetsarath:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style2.css">
 
@@ -19,7 +19,7 @@
           <div class="parte-verde">
             <h1 class="primeiro-titulo">Ainda não possui cadastro?</h1>
             <p class="primeiro-texto">crie a sua conta agora</p>
-            <button class="botão-cadastrar">Cadastrar</button>
+            <button class="botão-cadastrar" id="botaoCadastrar">Cadastrar</button>
           </div>
           <div class="conteudo-branco">
             <h1 class="segundo-titulo">FAÇA LOGIN</h1>
@@ -38,8 +38,48 @@
           </div>
         </div>
       </main>
-      
 
+      <button id="toggle-dark-mode" class="dark-mode-toggle">
+        <span class="icon">🌙</span>
+      </button>
+
+
+      <script>
+        // Função para alternar o modo escuro
+        function toggleDarkMode() {
+          const body = document.body;
+          body.classList.toggle('dark-mode');
+      
+          // Alterar o ícone entre lua e sol
+          const icon = document.querySelector('.dark-mode-toggle .icon');
+          if (body.classList.contains('dark-mode')) {
+            icon.textContent = '☀️'; // Sol
+          } else {
+            icon.textContent = '🌙'; // Lua
+          }
+      
+          // Salvar a preferência do usuário no localStorage
+          const isDarkMode = body.classList.contains('dark-mode');
+          localStorage.setItem('dark-mode', isDarkMode);
+        }
+      
+        // Verificar a preferência do usuário ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+          const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+          if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            document.querySelector('.dark-mode-toggle .icon').textContent = '☀️'; // Sol
+          }
+      
+          // Adicionar evento de clique ao botão de alternância
+          const darkModeToggle = document.getElementById('toggle-dark-mode');
+          darkModeToggle.addEventListener('click', toggleDarkMode);
+        });
+
+        document.getElementById("botaoCadastrar").addEventListener("click", function() {
+        window.location.href = "TelaDeCadastro.html";
+    });
+      </script>
 
 </body>
 </html>

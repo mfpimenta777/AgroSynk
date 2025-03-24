@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Dashboard</title>
+
+    <link rel="stylesheet" href="styleDashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,
+    wght@0,100..700;1,100..700&family=Marcellus+SC&family=Phetsarath:wght@400;
+    700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <main>
+
+    <!------------------------------- INICIO HEADER ----------------------------------------->
+
+        <header>
+        <div class="teste">
+            <section class="container">
+                <img class="logo-header" src="Img/Logo_AgroSynk-removebg-preview.png" alt="">
+                <h1 class="titulo-dashboard">Dashboard</h1>
+            </section>
+            
+            <!-- Container para o botão e título -->
+            <section class="header-container">
+                <button id="toggle-dark-mode" class="dark-mode-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+                     <h1 class="titulo-nome"><span class="olá">Olá,</span> Matheus</h1>
+                         <img  class="foto-cliente" src="Img/foto-cliente.jpg" alt="">
+            </section>
+        </div>
+     </header>
+
+    <!------------------------------- INICIO HEADER ----------------------------------------->
+
+    <!------------------------------- SIDEBAR ----------------------------------------->
+    <div class="teste2">
+        <div class="container-sidebar">
+            <div class="item-sidebar active">
+                <img class="favicon-dashboard" src="Favicon/painel-de-controle.png" alt="">
+                <p class="paragrafo-dashboard">Dashboard</p>
+            </div>
+            
+
+            <div class="item-sidebar">
+                <img class="favicon-configuração-de-area" src="Favicon/pino-de-localizacao.png" alt="">
+                <p class="paragrafo-dashboard">Configuração de Área</p>
+            </div>
+
+                <div class="item-sidebar">
+                  <img class="favicon-configuração-de-area" src="Favicon/do-utilizador.png" alt="">
+                    <p class="paragrafo-dashboard">Perfil</p>
+                 </div>
+
+                 <div class="item-sidebar">
+                    <img class="favicon-configuração-de-area" src="Favicon/configuracao.png" alt="">
+                      <p class="paragrafo-dashboard">Configuração</p>
+                   </div>
+        </div>
+    </div>
+
+    <!------------------------------- FIM SIDEBAR ----------------------------------------->
+
+    <!------------------------------- MENU PRINCIPAL ----------------------------------------->
+
+
+    <div class="container-menu-principal">
+        <div class="caixa-de-informação">
+            <img  class="favicon-aumentar" src="Favicon/aumentar (2).png" alt="">
+            <p class="paragrafo-grafico">91%</p>
+            <img class="imagem-grafico"  src="Img/image-removebg-preview.png" alt="">
+
+            <p class="paragrafo-grafico2">Overview</p>
+            <h1 class="paragrafo-grafico3">332.9</h1>
+        </div>
+
+        <div class="caixa-de-informação">
+            <img  class="favicon-aumentar" src="Favicon/aumentar (2).png" alt="">
+            <p class="paragrafo-grafico">91%</p>
+            <img class="imagem-grafico"  src="Img/image-removebg-preview.png" alt="">
+
+            <p class="paragrafo-grafico2">Overview</p>
+            <h1 class="paragrafo-grafico3">332.9</h1>
+        </div>
+
+        <div class="caixa-de-informação2">
+            <img  class="favicon-aumentar" src="Favicon/aumentar (1).png" alt="">
+            <p class="paragrafo-grafico-novo">91%</p>
+            <img class="imagem-grafico"  src="Img/image-removebg-preview (1).png" alt="">
+
+            <p class="paragrafo-grafico2-novo">Overview</p>
+            <h1 class="paragrafo-grafico3-novo">332.9</h1>
+        </div>
+
+        <div class="caixa-previsao">
+            <img class="imagem-previsao" src="Img/previsao.png" alt="">
+        </div>
+
+    </div>
+
+    <h1 class="titulo-dashboard-parte-de-baixo">Análise mais recentes </h1>
+
+    <div class="caixa-previsao2">
+        <img class="imagem-previsao2" src="Img/previsao2.png" alt="">
+    </div>
+
+    <div class="caixa-previsao3">
+        <img class="imagem-previsao3" src="Img/previsao3.png" alt="">
+    </div>
+
+    <div class="container-parte-de-baixo">
+        <div class="caixa-de-informação-parte-de-baixo">
+            <h2 class="titulo-parte-de-baixo">Visão Geral do Solo</h2>
+            <p class="texto-dashboard"> Umidade Percentual atual de umidade do solo <span class="numero">33%</span></p>
+            <p class="texto-dashboard"> Temperatura do solo <span class="numero">33°C</span></p>
+            <p class="texto-dashboard"> Umidade Percentual atual de umidade do solo <span class="numero">33%</span></p>
+            <img class="foto-tempo" src="Img/foto-tempo.png" alt="">
+        </div>
+
+
+    </div>
+    
+    <div class="container-sair">
+
+    <img class="sair" src="Favicon/sair.png" alt="">
+    <p class="paragrafo-sair">Sair</p>
+    </div>
+    
+    <!------------------------------- FIM MENU PRINCIPAL ----------------------------------------->
+
+    
+
+
+    </main>
+    
+
+
+
+
+
+
+
+
+
+    <script>
+        function toggleDarkMode() {
+          const body = document.body;
+          body.classList.toggle('dark-mode');
+      
+          const icon = document.querySelector('.dark-mode-toggle .icon');
+          if (body.classList.contains('dark-mode')) {
+            icon.textContent = '☀️'; // Sol
+          } else {
+            icon.textContent = '🌙'; // Lua
+          }
+      
+          const isDarkMode = body.classList.contains('dark-mode');
+          localStorage.setItem('dark-mode', isDarkMode);
+        }
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+          if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            document.querySelector('.dark-mode-toggle .icon').textContent = '☀️'; // Sol
+          }
+      
+          const darkModeToggle = document.getElementById('toggle-dark-mode');
+          darkModeToggle.addEventListener('click', toggleDarkMode);
+        });
+
+        // Simulando um nome obtido após o login/cadastro
+        const nomeUsuario = "João"; // Troque por uma variável que você vai obter do backend
+
+        // Seleciona o elemento <h1> e muda o texto
+        const greeting = document.getElementById('greeting');
+        greeting.textContent = `Olá, ${nomeUsuario}`;
+
+    </script>
+
+</body>
+</html>

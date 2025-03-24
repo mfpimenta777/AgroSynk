@@ -19,7 +19,7 @@
           <div class="parte-verde">
             <h1 class="primeiro-titulo">Bem-vindo de volta!</h1>
             <p class="primeiro-texto">acesse a sua conta agora</p>
-            <button class="botão-cadastrar">Entrar</button>
+            <button class="botão-cadastrar" id="botaoEntrar">Entrar</button>
           </div>
           <div class="conteudo-branco">
             <h1 class="segundo-titulo">CRIE SUA CONTA</h1>
@@ -43,6 +43,49 @@
           </div>
         </div>
       </main>
+
+      <button id="toggle-dark-mode" class="dark-mode-toggle">
+        <span class="icon">🌙</span>
+      </button>
+
+
+      <script>
+
+        // Função para alternar o modo escuro
+        function toggleDarkMode() {
+          const body = document.body;
+          body.classList.toggle('dark-mode');
+      
+          // Alterar o ícone entre lua e sol
+          const icon = document.querySelector('.dark-mode-toggle .icon');
+          if (body.classList.contains('dark-mode')) {
+            icon.textContent = '☀️'; // Sol
+          } else {
+            icon.textContent = '🌙'; // Lua
+          }
+      
+          // Salvar a preferência do usuário no localStorage
+          const isDarkMode = body.classList.contains('dark-mode');
+          localStorage.setItem('dark-mode', isDarkMode);
+        }
+      
+        // Verificar a preferência do usuário ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+          const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+          if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            document.querySelector('.dark-mode-toggle .icon').textContent = '☀️'; // Sol
+          }
+      
+          // Adicionar evento de clique ao botão de alternância
+          const darkModeToggle = document.getElementById('toggle-dark-mode');
+          darkModeToggle.addEventListener('click', toggleDarkMode);
+        });
+
+        document.getElementById("botaoEntrar").addEventListener("click", function() {
+        window.location.href = "TelaDeLogin.html";
+    });
+      </script>
       
 
 

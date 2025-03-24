@@ -24,16 +24,29 @@ body {
 
 .parte-verde {
   position: relative;
-  background-color: #476F40;
   width: 25%;
   padding: 20px;
   color: #f0f0f0;
   display: flex;
-  flex-direction: column; /* Organiza os elementos na vertical */
-  align-items: center; /* Centraliza horizontalmente */
-  height: 100%; /* Garante que ocupe toda a altura do container */
+  flex-direction: column; 
+  align-items: center;
+  height: 100%; 
   font-family: 'Phetsarath', sans-serif;
+  background: linear-gradient(45deg, #958045, #476F40, #958045, #476F40);
+  background-attachment: fixed;
+  background-size: 500%;
+  animation: backgroundAnimation 10s infinite ease;
 
+}
+
+
+@keyframes backgroundAnimation {
+0%, 100% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
 }
 
 .conteudo-branco {
@@ -172,3 +185,104 @@ input:focus {
   transform: scale(0.95);
 }
 
+
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+  background-color: #1a1a1a; /* Fundo escuro */
+  color: #e0e0e0; /* Texto claro */
+}
+
+.dark-mode .container {
+  background-color: #2d2d2d; /* Fundo escuro para o container */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .parte-verde {
+  background-color: #476F40; /* Mantém o verde */
+}
+
+.dark-mode .conteudo-branco {
+  background-color: #2d2d2d; /* Fundo escuro para a parte branca */
+  color: #e0e0e0; /* Texto claro */
+}
+
+.dark-mode .segundo-titulo {
+  color: #e0e0e0; /* Texto claro */
+}
+
+.dark-mode input {
+  background-color: #333; /* Fundo escuro para os inputs */
+  border: 1px solid #444;
+  color: #e0e0e0; /* Texto claro */
+}
+
+.dark-mode input:focus {
+  border: 2px solid #476F40; /* Mantém o verde no foco */
+}
+
+.dark-mode .botão-login {
+  background-color: #476F40; /* Mantém o verde */
+}
+
+.dark-mode .botão-login:hover {
+  background-color: #3a5a35; /* Verde mais escuro no hover */
+}
+
+.dark-mode .botão-cadastrar {
+  border: 1px solid #e0e0e0; /* Borda clara */
+  color: #e0e0e0; /* Texto claro */
+}
+
+.dark-mode .botão-cadastrar:hover {
+  background-color: #e0e0e0; /* Fundo claro no hover */
+  color: #476F40; /* Texto verde no hover */
+}
+
+
+
+
+
+/* Estilo do botão de alternância */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 30px;
+  background-color: #476F40; /* Verde */
+  border: none;
+  border-radius: 25px; /* Arredondado */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+
+
+.dark-mode-toggle .icon {
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.dark-mode-toggle:hover {
+  background-color: #3a5a35; /* Verde mais escuro */
+}
+
+/* Efeito ao clicar */
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Estilo quando o modo escuro está ativo */
+body.dark-mode .dark-mode-toggle {
+  background-color: #e0e0e0; /* Fundo claro */
+}
+
+body.dark-mode .dark-mode-toggle .icon {
+  transform: translateX(25px); /* Move o ícone para a direita */
+  content: "☀️"; /* Altera o ícone para sol */
+}

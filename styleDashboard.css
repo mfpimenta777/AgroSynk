@@ -1,0 +1,453 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Phetsarath', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    min-height: 100vh; /* Garante que o body ocupe pelo menos 100% da altura da tela */
+}
+
+html {
+    height: 100%;
+    overflow: auto; /* Permite rolagem na página */
+}
+
+    
+    *,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* ------------------------------------------ HEADER ----------------------------------------------- */
+
+.container {
+    display: flex; /* Alinha os itens lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 200px; /* Espaço entre a logo e o título */
+    padding: 20px; /* Espaço interno para respiração */
+    width: 100%;
+}
+
+.logo-header {
+    height: 100px;
+}
+
+.titulo-dashboard {
+    font-size: 2rem; /* Tamanho do título */
+    font-weight: bold;
+}
+
+/* Estilo do botão de alternância */
+.dark-mode-toggle {
+    position: fixed;
+    top: 60px;
+    right: 450px;
+    width: 70px;
+    height: 35px;
+    background-color: #476F40; /* Verde */
+    border: none;
+    border-radius: 25px; /* Arredondado */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .dark-mode-toggle .icon {
+    font-size: 18px;
+    transition: transform 0.3s;
+  }
+  
+  /* Efeito ao passar o mouse */
+  .dark-mode-toggle:hover {
+    background-color: #3a5a35; /* Verde mais escuro */
+  }
+  
+  /* Efeito ao clicar */
+  .dark-mode-toggle:active {
+    transform: scale(0.95);
+  }
+  
+  /* Estilo quando o modo escuro está ativo */
+  body.dark-mode .dark-mode-toggle {
+    background-color: #e0e0e0; /* Fundo claro */
+  }
+  
+  body.dark-mode .dark-mode-toggle .icon {
+    transform: translateX(30px); /* Move o ícone para a direita */
+    content: "☀️"; /* Altera o ícone para sol */
+  }
+
+  .teste{
+    position: relative;
+    display: flex;
+}
+
+.header-container {
+    display: flex;       
+    align-items: center;  
+    gap: 55px;           
+    position: relative;
+    right: 100px;
+
+}
+
+/* Ajuste no título, se necessário */
+.titulo-nome {
+    font-size: 1.5rem;  
+    white-space: nowrap;  /* Impede a quebra de linha */ 
+}
+
+.olá {
+    color: #bfb9b9;  /* Cor cinza claro */
+}
+
+.foto-cliente{
+    height: 85px;
+    border-radius: 100px;
+}
+
+
+
+/* ------------------------------------------ FIM HEADER ----------------------------------------------- */
+
+
+/* ------------------------------------------ SIDEBAR ----------------------------------------------- */
+
+.teste2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-sidebar {
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    position: fixed;
+    margin-left: 100px;
+    margin-top: 60px;
+    gap: 15px;  /* Espaçamento entre os itens */
+    height: 100%; /* Ocupa toda a altura da tela */
+
+}
+
+.item-sidebar {
+    display: flex;
+    align-items: center;  /* Alinha ícones e texto verticalmente */
+    gap: 10px;  /* Espaço entre ícone e texto */
+    position: relative;  /* Para permitir a sobreposição do retângulo */
+    padding: 10px;  /* Adiciona um espaçamento para que o fundo do retângulo fique mais confortável */
+}
+
+.favicon-dashboard, .favicon-configuração-de-area {
+    height: 32px;
+    width: 32px;  /* Garantindo que os ícones não distorçam */
+}
+
+.paragrafo-dashboard {
+    color: #999999;  /* Cor cinza claro */
+    margin-top: 15px;
+    z-index: 9999;
+}
+
+
+/* ------------------------------------------ ITEM ATIVO ------------------------------------------- */
+
+/* Propriedades padrão para todos os itens da sidebar */
+.item-sidebar {
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+}
+
+/* Cor de fundo do item quando ativo */
+.item-sidebar.active {
+    background-color: rgba(58, 90, 53, 0.244);  /* Cor de fundo #3a5a35 com 50% de opacidade */
+    color: #333d33;  /* Cor do texto quando ativo */
+}
+
+.item-sidebar.active .favicon-dashboard, 
+.item-sidebar.active .favicon-configuração-de-area {
+    filter: invert(1000%) sepia(1000%) saturate(20%) hue-rotate(80deg); /* Muda a cor do ícone */
+}
+
+.item-sidebar.active .paragrafo-dashboard {
+    color: #333d33;  /* Cor do texto quando ativo */
+}
+
+
+/* ------------------------------------------ ITEM ATIVO ------------------------------------------- */
+
+/* ------------------------------------------ ITEM HOVER ------------------------------------------- */
+
+
+/* Efeito quando passa o mouse */
+.item-sidebar:hover {
+    background-color: rgba(58, 90, 53, 0.1);  /* Fundo sutil */
+    cursor: pointer;
+}
+
+/* ------------------------------------------ ITEM HOVER ------------------------------------------- */
+
+
+/* ------------------------- Cor dos ícones e texto no hover -------------------------- */
+.item-sidebar:hover .paragrafo-dashboard {
+    color: #3a5a35; /* Cor do texto ao passar o mouse */
+}
+
+.item-sidebar:hover .favicon-dashboard, 
+.item-sidebar:hover .favicon-configuração-de-area {
+    filter: invert(1000%) sepia(100%) saturate(20%) hue-rotate(90deg); /* Muda a cor do ícone */
+}
+
+
+
+
+/* ------------------------------------------ FIM SIDEBAR ----------------------------------------------- */
+
+
+
+
+/* ------------------------------------------ MENU PRINCIPAL ----------------------------------------------- */
+
+.container-menu-principal {
+    display: flex;
+    position: fixed;
+    margin-left: 400px;
+    margin-top: 20px; /* Ajuste esse valor para a distância desejada */
+    gap: 80px;
+}
+
+
+.caixa-de-informação {
+    
+    width: 290px;
+    height: 170px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #958045, #476F40, #958045, #476F40);
+    background-attachment: fixed;
+    background-size: 500%;
+    animation: backgroundAnimation 10s infinite ease;
+    position: relative;
+}
+
+@keyframes backgroundAnimation {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.favicon-aumentar{
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.imagem-grafico{
+    display: flex;
+    position: relative;
+    margin-left: 150px;
+    height: 100px;
+    margin-top: -70px;
+}
+
+.paragrafo-grafico {
+    position: absolute; 
+    top: 30px; 
+    left: 74%; 
+    transform: translateX(-50%); 
+    color: white; 
+    font-size: 15px;
+}
+
+.paragrafo-grafico2, .paragrafo-grafico3 {
+    color: white;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: -19px;
+}
+
+/* CAIXA BRANCA */
+
+
+.caixa-de-informação2 {
+    
+    width: 290px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Adiciona a sombra */
+    height: 170px;
+    border-radius: 25px;
+    animation: backgroundAnimation 10s infinite ease;
+    position: relative;
+}
+
+
+.favicon-aumentar{
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.imagem-grafico{
+    display: flex;
+    position: relative;
+    margin-left: 150px;
+    height: 100px;
+    margin-top: -70px;
+}
+
+.paragrafo-grafico-novo {
+    position: absolute; 
+    top: 30px; 
+    left: 74%; 
+    transform: translateX(-50%); 
+    color: #476F40; 
+    font-size: 15px;
+}
+
+.paragrafo-grafico2-novo, .paragrafo-grafico3-novo {
+    color: #476F40;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: -19px;
+}
+
+.caixa-previsao{
+    width: 290px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Adiciona a sombra */
+    height: 180px;
+    border-radius: 25px;
+    animation: backgroundAnimation 10s infinite ease;
+    position: relative;
+}
+
+.imagem-previsao{
+    width: 85%;
+    margin-left: 15px;
+    margin-top: 9px;
+}
+
+.caixa-previsao2{
+    width: 290px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Adiciona a sombra */
+    height: 180px;
+    border-radius: 25px;
+    animation: backgroundAnimation 10s infinite ease;
+    position: fixed;
+    margin-left: 1510px;
+    margin-top: 250px;
+}
+
+.imagem-previsao2{
+    width: 85%;
+    margin-left: 15px;
+    margin-top: 35px;
+}
+
+.caixa-previsao3{
+    width: 290px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Adiciona a sombra */
+    height: 180px;
+    border-radius: 25px;
+    animation: backgroundAnimation 10s infinite ease;
+    position: fixed;
+    margin-left: 1510px;
+    margin-top: 480px;
+}
+
+.imagem-previsao3{
+    width: 85%;
+    margin-left: 15px;
+    margin-top: 35px;
+}
+
+
+
+/* FIM CAIXA BRANCA */
+
+.titulo-dashboard-parte-de-baixo{
+    position: fixed;
+    color: #333;
+    margin-left: 360px;
+    margin-top: 250px;
+}
+
+.container-parte-de-baixo{
+    display: flex;
+    position: relative;
+    margin-left: 400px;
+    margin-top: 400px;
+}
+
+.caixa-de-informação-parte-de-baixo{
+    width: 880px;
+    height: 300px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Adiciona a sombra */
+    border-radius: 25px;
+    animation: backgroundAnimation 10s infinite ease;
+    position: fixed;
+    margin-top: -50px;
+}
+
+.titulo-parte-de-baixo{
+    position: relative;
+    display: flex;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.texto-dashboard{
+    color: #476F40;
+    font-size: 19px;
+    position: relative;
+    display: flex;
+    margin-left: 30px;
+}
+
+.numero {
+    font-weight: bold;   
+    font-size: 24px;     
+    color: black;   
+    margin-left: 30px;    
+    margin-top: -4px;
+}
+
+.foto-tempo{
+    width: 30%;
+    border-radius: 30px;
+    margin-top: -200px;
+    margin-left: 600px;
+}
+
+.container-sair{
+    position: fixed;
+    margin-left: 120px;
+    margin-top: 250px;
+}
+
+.sair{
+    width: 35px;
+    cursor: pointer;
+}
+
+.paragrafo-sair{
+    color: #999999;
+    margin-left: 50px;
+    margin-top: -35px;
+    cursor: pointer;
+}
+
+/* ------------------------------------------ FIM MENU PRINCIPAL ----------------------------------------------- */
+
+
