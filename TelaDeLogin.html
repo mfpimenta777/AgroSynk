@@ -24,15 +24,20 @@
           <div class="conteudo-branco">
             <h1 class="segundo-titulo">FAÇA LOGIN</h1>
       
-            <div class="input-container">
-              <img src="Favicon/o-email.png" alt="Ícone de Usuário" class="input-icon">
-              <input type="email" placeholder="E-mail">
-            </div>
-      
-              <div class="input-container2">
-              <img src="Favicon/cadeado.png" alt="Ícone de Cadeado" class="lock-icon">
-              <input type="password" placeholder="Senha">
+            <form id="loginForm">
+              <div class="input-container">
+                  <img src="Favicon/o-email.png" alt="Ícone de Usuário" class="input-icon">
+                  <input type="email" id="email" placeholder="E-mail" required>
               </div>
+          
+              <div class="input-container2">
+                  <img src="Favicon/cadeado.png" alt="Ícone de Cadeado" class="lock-icon">
+                  <input type="password" id="senha" placeholder="Senha" required>
+              </div>
+          
+              <button type="submit" class="botão-login">Login</button>
+          </form>
+          
 
             <button class="botão-login">Login</button>
           </div>
@@ -80,6 +85,35 @@
         window.location.href = "TelaDeCadastro.html";
     });
       </script>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', async function(event) {
+      event.preventDefault(); // Evita o recarregamento da página
+
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+
+      try {
+          const response = await fetch('http://localhost:5000/login', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, senha })
+          });
+
+          const data = await response.json();
+          if (data.success) {
+              alert('Login bem-sucedido!');
+              // Redirecionar para a página principal ou dashboard
+              window.location.href = "dashboard.html";
+          } else {
+              alert('Erro: ' + data.message);
+          }
+      } catch (error) {
+          console.error('Erro ao enviar requisição:', error);
+          alert('Erro ao tentar fazer login. Verifique o console para mais detalhes.');
+      }
+  });
+</script>
 
 </body>
 </html>
